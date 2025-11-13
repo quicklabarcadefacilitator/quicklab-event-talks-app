@@ -1,16 +1,12 @@
 {
-  "name": "tech-event-website",
+  "name": "tech-talks-website",
   "version": "1.0.0",
-  "description": "A single-page website for a 1-day tech event.",
-  "main": "build.js",
+  "description": "A simple website for a 1-day tech conference.",
+  "main": "server.js",
   "scripts": {
-    "build": "node build.js"
+    "start": "node server.js"
   },
-  "keywords": [
-    "event",
-    "schedule",
-    "tech-talks"
-  ],
-  "author": "Gemini",
+  "keywords": [],
+  "author": "",
   "license": "ISC"
 }

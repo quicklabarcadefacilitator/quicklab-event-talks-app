@@ -1,0 +1,44 @@
+[
+  {
+    "title": "The Future of JavaScript",
+    "speakers": ["Jane Doe"],
+    "category": ["JavaScript", "Web Development"],
+    "duration": 60,
+    "description": "A deep dive into the upcoming features of ECMAScript and how they will shape the future of web development."
+  },
+  {
+    "title": "Building Scalable APIs with Node.js",
+    "speakers": ["John Smith"],
+    "category": ["Node.js", "API", "Backend"],
+    "duration": 60,
+    "description": "Learn how to design and build robust and scalable APIs using Node.js and Express."
+  },
+  {
+    "title": "CSS Grid and Flexbox: A Modern Approach to Layout",
+    "speakers": ["Emily White"],
+    "category": ["CSS", "Frontend"],
+    "duration": 60,
+    "description": "Master the power of CSS Grid and Flexbox to create complex and responsive layouts with ease."
+  },
+  {
+    "title": "Introduction to Machine Learning with Python",
+    "speakers": ["David Green", "Sarah Brown"],
+    "category": ["Python", "Machine Learning"],
+    "duration": 60,
+    "description": "A beginner-friendly introduction to the world of machine learning using Python and popular libraries like Scikit-learn."
+  },
+  {
+    "title": "State Management in React with Redux",
+    "speakers": ["Michael Black"],
+    "category": ["React", "JavaScript", "Frontend"],
+    "duration": 60,
+    "description": "An in-depth look at how to manage application state in large React applications using Redux."
+  },
+  {
+    "title": "DevOps for Dummies",
+    "speakers": ["Chris Blue"],
+    "category": ["DevOps", "CI/CD"],
+    "duration": 60,
+    "description": "A practical guide to DevOps principles and how to implement a CI/CD pipeline for your projects."
+  }
+]
