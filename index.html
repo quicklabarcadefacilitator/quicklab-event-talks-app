@@ -1,223 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tech Talks Today</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Talks Today</title>
+    <style>body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
 
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 1rem;
-      text-align: center;
-    }
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
 
-    .search-container {
-      margin-top: 1rem;
-    }
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
 
-    #search {
-      width: 80%;
-      max-width: 400px;
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
+#search {
+    padding: 1rem 0;
+    text-align: center;
+}
 
-    #schedule-container {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-    }
+#search input {
+    width: 50%;
+    padding: 0.5rem;
+}
 
-    .talk {
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      margin-bottom: 1.5rem;
-      display: flex;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
+.schedule {
+    margin-top: 1rem;
+}
 
-    .talk-time {
-      background-color: #eee;
-      padding: 1rem;
-      text-align: center;
-      font-weight: bold;
-      border-right: 1px solid #ddd;
-      min-width: 100px;
-    }
+.talk {
+    background: #fff;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-left: 5px solid #333;
+}
 
-    .talk-details {
-      padding: 1rem;
-    }
+.talk h3 {
+    margin-top: 0;
+}
 
-    .talk-title {
-      margin-top: 0;
-      color: #333;
-    }
+.talk .meta {
+    font-size: 0.9rem;
+    color: #666;
+}
 
-    .talk-speakers {
-      font-style: italic;
-      color: #555;
-    }
-
-    .talk-category {
-      font-size: 0.9rem;
-      color: #777;
-    }
-
-    .talk-description {
-      line-height: 1.6;
-    }
-
-    .break {
-      text-align: center;
-      font-weight: bold;
-      color: #777;
-      margin-bottom: 1.5rem;
-      padding: 1rem;
-      background-color: #e9ecef;
-      border-radius: 5px;
-    }
-  </style>
+.break {
+    background: #eee;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Tech Talks Today</h1>
-    <div class="search-container">
-      <input type="text" id="search" placeholder="Search by category...">
+    <header>
+        <div class="container">
+            <h1>Tech Talks Today</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="search">
+            <input type="text" id="searchInput" placeholder="Search by category...">
+        </section>
+
+        <section class="schedule">
+            
+        <div class="talk" data-category="AI, Machine Learning">
+            <h3>The Future of Artificial Intelligence</h3>
+            <p class="meta">
+                <strong>Time:</strong> 10:00 AM - 11:00 AM<br>
+                <strong>Speakers:</strong> John Doe<br>
+                <strong>Category:</strong> AI, Machine Learning
+            </p>
+            <p>A deep dive into the future of AI and its potential impact on society.</p>
+        </div>
+    
+        <div class="talk" data-category="Web Development, Scalability">
+            <h3>Building Scalable Web Applications</h3>
+            <p class="meta">
+                <strong>Time:</strong> 11:10 AM - 12:10 PM<br>
+                <strong>Speakers:</strong> Jane Smith, Peter Jones<br>
+                <strong>Category:</strong> Web Development, Scalability
+            </p>
+            <p>Learn how to build web applications that can handle millions of users.</p>
+        </div>
+    
+        <div class="talk" data-category="Cybersecurity">
+            <h3>Cybersecurity in the Modern Age</h3>
+            <p class="meta">
+                <strong>Time:</strong> 12:20 PM - 01:20 PM<br>
+                <strong>Speakers:</strong> Mary Johnson<br>
+                <strong>Category:</strong> Cybersecurity
+            </p>
+            <p>An overview of the latest threats and how to protect your systems.</p>
+        </div>
+    
+            <div class="break">
+                <h3>Lunch Break</h3>
+                <p class="meta">01:30 PM - 02:30 PM</p>
+            </div>
+        
+        <div class="talk" data-category="Quantum Computing, Future Tech">
+            <h3>The Power of Quantum Computing</h3>
+            <p class="meta">
+                <strong>Time:</strong> 02:30 PM - 03:30 PM<br>
+                <strong>Speakers:</strong> David Williams<br>
+                <strong>Category:</strong> Quantum Computing, Future Tech
+            </p>
+            <p>Explore the mind-bending world of quantum computing and its applications.</p>
+        </div>
+    
+        <div class="talk" data-category="Data Science, Social Impact">
+            <h3>Data Science for Social Good</h3>
+            <p class="meta">
+                <strong>Time:</strong> 03:40 PM - 04:40 PM<br>
+                <strong>Speakers:</strong> Sarah Miller, Michael Brown<br>
+                <strong>Category:</strong> Data Science, Social Impact
+            </p>
+            <p>Using data to solve some of the world's most pressing problems.</p>
+        </div>
+    
+        <div class="talk" data-category="Serverless, Cloud Computing">
+            <h3>The Rise of Serverless Architectures</h3>
+            <p class="meta">
+                <strong>Time:</strong> 04:50 PM - 05:50 PM<br>
+                <strong>Speakers:</strong> Robert Davis<br>
+                <strong>Category:</strong> Serverless, Cloud Computing
+            </p>
+            <p>A look at the benefits and challenges of serverless computing.</p>
+        </div>
+    
+        </section>
     </div>
-  </header>
-  <main id="schedule-container">
-    <!-- Schedule will be dynamically generated here -->
-  </main>
-  <template id="talk-template">
-    <div class="talk">
-      <div class="talk-time"></div>
-      <div class="talk-details">
-        <h2 class="talk-title"></h2>
-        <p class="talk-speakers"></p>
-        <p class="talk-category"></p>
-        <p class="talk-description"></p>
-      </div>
-    </div>
-  </template>
-  <script>
-    const talksData = [
-      {
-        "title": "The Future of JavaScript",
-        "speakers": ["Jane Doe"],
-        "category": ["JavaScript", "Web Development"],
-        "duration": 60,
-        "description": "A deep dive into the upcoming features of ECMAScript and how they will shape the future of web development."
-      },
-      {
-        "title": "Building Scalable APIs with Node.js",
-        "speakers": ["John Smith"],
-        "category": ["Node.js", "API", "Backend"],
-        "duration": 60,
-        "description": "Learn how to design and build robust and scalable APIs using Node.js and Express."
-      },
-      {
-        "title": "CSS Grid and Flexbox: A Modern Approach to Layout",
-        "speakers": ["Emily White"],
-        "category": ["CSS", "Frontend"],
-        "duration": 60,
-        "description": "Master the power of CSS Grid and Flexbox to create complex and responsive layouts with ease."
-      },
-      {
-        "title": "Introduction to Machine Learning with Python",
-        "speakers": ["David Green", "Sarah Brown"],
-        "category": ["Python", "Machine Learning"],
-        "duration": 60,
-        "description": "A beginner-friendly introduction to the world of machine learning using Python and popular libraries like Scikit-learn."
-      },
-      {
-        "title": "State Management in React with Redux",
-        "speakers": ["Michael Black"],
-        "category": ["React", "JavaScript", "Frontend"],
-        "duration": 60,
-        "description": "An in-depth look at how to manage application state in large React applications using Redux."
-      },
-      {
-        "title": "DevOps for Dummies",
-        "speakers": ["Chris Blue"],
-        "category": ["DevOps", "CI/CD"],
-        "duration": 60,
-        "description": "A practical guide to DevOps principles and how to implement a CI/CD pipeline for your projects."
-      }
-    ];
 
-    document.addEventListener('DOMContentLoaded', () => {
-      const scheduleContainer = document.getElementById('schedule-container');
-      const talkTemplate = document.getElementById('talk-template');
-      const searchInput = document.getElementById('search');
+    <script>document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('searchInput');
+    const talks = document.querySelectorAll('.talk');
 
-      let talks = talksData;
-      renderSchedule(talks);
+    searchInput.addEventListener('keyup', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
 
-      searchInput.addEventListener('input', () => {
-        const searchTerm = searchInput.value.toLowerCase();
-        const filteredTalks = talks.filter(talk => {
-          return talk.category.some(category => category.toLowerCase().includes(searchTerm));
+        talks.forEach(talk => {
+            const category = talk.dataset.category.toLowerCase();
+            if (category.includes(searchTerm)) {
+                talk.style.display = 'block';
+            } else {
+                talk.style.display = 'none';
+            }
         });
-        renderSchedule(filteredTalks);
-      });
-
-      function renderSchedule(talksToRender) {
-        scheduleContainer.innerHTML = '';
-        let currentTime = new Date();
-        currentTime.setHours(10, 0, 0, 0);
-
-        talksToRender.forEach((talk, index) => {
-          const talkElement = document.importNode(talkTemplate.content, true);
-
-          const startTime = new Date(currentTime);
-          const endTime = new Date(currentTime.getTime() + talk.duration * 60000);
-
-          const talkTime = talkElement.querySelector('.talk-time');
-          talkTime.textContent = `${formatTime(startTime)} - ${formatTime(endTime)}`;
-
-          const talkTitle = talkElement.querySelector('.talk-title');
-          talkTitle.textContent = talk.title;
-
-          const talkSpeakers = talkElement.querySelector('.talk-speakers');
-          talkSpeakers.textContent = `By: ${talk.speakers.join(', ')}`;
-
-          const talkCategory = talkElement.querySelector('.talk-category');
-          talkCategory.textContent = `Category: ${talk.category.join(', ')}`;
-
-          const talkDescription = talkElement.querySelector('.talk-description');
-          talkDescription.textContent = talk.description;
-
-          scheduleContainer.appendChild(talkElement);
-
-          currentTime.setTime(endTime.getTime() + 10 * 60000); // 10 minute break
-
-          if (index === 2) { // Lunch break after the 3rd talk
-            const lunchBreakElement = document.createElement('div');
-            lunchBreakElement.classList.add('break');
-            const lunchStartTime = new Date(currentTime);
-            const lunchEndTime = new Date(currentTime.getTime() + 60 * 60000);
-            lunchBreakElement.textContent = `Lunch Break: ${formatTime(lunchStartTime)} - ${formatTime(lunchEndTime)}`;
-            scheduleContainer.appendChild(lunchBreakElement);
-            currentTime.setTime(lunchEndTime.getTime() + 10 * 60000);
-          }
-        });
-      }
-
-      function formatTime(date) {
-        return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-      }
     });
-  </script>
+});
+</script>
 </body>
 </html>
