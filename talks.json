@@ -1,38 +1,44 @@
 [
   {
-    "title": "The Future of Artificial Intelligence",
+    "title": "The Future of JavaScript",
     "speakers": ["John Doe"],
-    "category": ["AI", "Machine Learning"],
-    "description": "A deep dive into the future of AI and its potential impact on society."
+    "category": ["JavaScript", "Web Development"],
+    "duration": 60,
+    "description": "A deep dive into the new features of ECMAScript 2025 and what they mean for the future of web development."
   },
   {
-    "title": "Building Scalable Web Applications",
-    "speakers": ["Jane Smith", "Peter Jones"],
-    "category": ["Web Development", "Scalability"],
-    "description": "Learn how to build web applications that can handle millions of users."
+    "title": "Building Scalable APIs with Node.js",
+    "speakers": ["Jane Smith"],
+    "category": ["Node.js", "API", "Backend"],
+    "duration": 60,
+    "description": "Learn how to build robust and scalable APIs using Node.js, Express, and MongoDB."
   },
   {
-    "title": "Cybersecurity in the Modern Age",
-    "speakers": ["Mary Johnson"],
-    "category": ["Cybersecurity"],
-    "description": "An overview of the latest threats and how to protect your systems."
+    "title": "CSS Grid and Flexbox: A Deep Dive",
+    "speakers": ["Peter Jones"],
+    "category": ["CSS", "Frontend"],
+    "duration": 60,
+    "description": "Master the power of CSS Grid and Flexbox to create complex and responsive layouts with ease."
   },
   {
-    "title": "The Power of Quantum Computing",
-    "speakers": ["David Williams"],
-    "category": ["Quantum Computing", "Future Tech"],
-    "description": "Explore the mind-bending world of quantum computing and its applications."
+    "title": "Introduction to Machine Learning with Python",
+    "speakers": ["Mary Johnson", "David Williams"],
+    "category": ["Python", "Machine Learning"],
+    "duration": 60,
+    "description": "A beginner-friendly introduction to the world of machine learning using Python and popular libraries like Scikit-learn and TensorFlow."
   },
   {
-    "title": "Data Science for Social Good",
-    "speakers": ["Sarah Miller", "Michael Brown"],
-    "category": ["Data Science", "Social Impact"],
-    "description": "Using data to solve some of the world's most pressing problems."
+    "title": "The Art of Debugging",
+    "speakers": ["Robert Brown"],
+    "category": ["General", "Debugging"],
+    "duration": 60,
+    "description": "Learn effective debugging techniques and tools to quickly find and fix bugs in your code."
   },
   {
-    "title": "The Rise of Serverless Architectures",
-    "speakers": ["Robert Davis"],
-    "category": ["Serverless", "Cloud Computing"],
-    "description": "A look at the benefits and challenges of serverless computing."
+    "title": "WebAssembly: The Future of the Web",
+    "speakers": ["Susan Davis"],
+    "category": ["WebAssembly", "Web Development"],
+    "duration": 60,
+    "description": "Discover the power of WebAssembly and how it's enabling near-native performance in web applications."
   }
 ]

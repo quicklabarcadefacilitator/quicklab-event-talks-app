@@ -2,7 +2,6 @@ body {
   font-family: sans-serif;
   margin: 0;
   background-color: #f4f4f4;
-  color: #333;
 }
 
 header {
@@ -24,59 +23,42 @@ header {
   border-radius: 5px;
 }
 
-#schedule-container {
+#schedule {
+  width: 90%;
   max-width: 800px;
   margin: 2rem auto;
-  padding: 1rem;
 }
 
 .talk {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 5px;
-  margin-bottom: 1.5rem;
-  display: flex;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.talk-time {
-  background-color: #eee;
-  padding: 1rem;
-  text-align: center;
-  font-weight: bold;
-  border-right: 1px solid #ddd;
-  min-width: 100px;
-}
-
-.talk-details {
+  margin-bottom: 1rem;
   padding: 1rem;
 }
 
-.talk-title {
+.talk h2 {
   margin-top: 0;
+}
+
+.talk .time {
+  font-weight: bold;
   color: #333;
 }
 
-.talk-speakers {
+.talk .speakers {
   font-style: italic;
   color: #555;
 }
 
-.talk-category {
-  font-size: 0.9rem;
-  color: #777;
+.talk .category {
+  margin-top: 0.5rem;
 }
 
-.talk-description {
-  line-height: 1.6;
-}
-
-.break {
-  text-align: center;
-  font-weight: bold;
-  color: #777;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  background-color: #e9ecef;
-  border-radius: 5px;
+.talk .category span {
+  background-color: #eee;
+  border-radius: 3px;
+  padding: 0.2rem 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
 }

@@ -1,12 +1,5 @@
 {
-  "name": "tech-talks-2025",
-  "version": "1.0.0",
-  "description": "A website for a 1-day event filled with technical talks.",
-  "main": "generate.js",
-  "scripts": {
-    "build": "node generate.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
