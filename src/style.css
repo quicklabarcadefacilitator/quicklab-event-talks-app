@@ -1,136 +1,79 @@
-/* General Body Styling */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f7f9;
-    color: #333;
+    font-family: sans-serif;
     margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.search-container {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#search {
+    width: 50%;
+    padding: 0.5rem;
+}
+
+.schedule {
+    list-style: none;
     padding: 0;
 }
 
-/* Header */
-header {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    text-align: center;
-    padding: 2rem 1rem;
+.talk {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-header p {
-    margin-top: 0.5rem;
-    font-size: 1.1rem;
-    color: #bdc3c7;
-}
-
-/* Main Content */
-main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-/* Search Bar */
-.search-container {
-    margin-bottom: 2rem;
-}
-
-#searchInput {
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 1rem;
-    border: 2px solid #dfe6e9;
-    border-radius: 8px;
-    box-sizing: border-box;
-    transition: border-color 0.3s;
-}
-
-#searchInput:focus {
-    border-color: #3498db;
-    outline: none;
-}
-
-/* Schedule Container */
-#schedule-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-/* Talk Card */
-.talk-card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    padding: 1.5rem;
-    display: flex;
-    gap: 1.5rem;
-    border-left: 5px solid #3498db;
+.talk.hidden {
+    display: none;
 }
 
 .talk-time {
-    flex: 0 0 120px;
-    text-align: right;
-    color: #3498db;
     font-weight: bold;
-    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
 }
 
-.talk-details {
-    flex: 1;
-}
-
-.talk-details h2 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.4rem;
-    color: #2c3e50;
+.talk-title {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .talk-speakers {
     font-style: italic;
-    color: #555;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .talk-description {
-    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .talk-categories {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
+    margin-top: 1rem;
 }
 
 .talk-category {
-    background-color: #ecf0f1;
-    color: #7f8c8d;
-    padding: 0.3rem 0.7rem;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: 500;
-}
-
-/* Break/Lunch Styling */
-.break-card {
-    text-align: center;
-    padding: 1rem;
-    background-color: #ecf0f1;
-    border-radius: 8px;
-    color: #7f8c8d;
-    font-weight: 500;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: 3rem;
-    background-color: #e9ecef;
-    color: #6c757d;
+    display: inline-block;
+    background-color: #eee;
+    border-radius: 3px;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
     font-size: 0.9rem;
 }

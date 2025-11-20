@@ -1,10 +1,10 @@
 {
-  "name": "tech-talks-website",
+  "name": "tech-talks-2025",
   "version": "1.0.0",
-  "description": "A simple website for a 1-day tech conference.",
-  "main": "server.js",
+  "description": "A website for a 1-day event filled with technical talks.",
+  "main": "generate.js",
   "scripts": {
-    "start": "node server.js"
+    "build": "node generate.js"
   },
   "keywords": [],
   "author": "",

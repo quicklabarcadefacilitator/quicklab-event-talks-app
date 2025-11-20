@@ -1,50 +1,109 @@
 const fs = require('fs');
+const path = require('path');
 
-const talks = JSON.parse(fs.readFileSync('talks.json', 'utf-8'));
-const template = fs.readFileSync('views/index.html', 'utf-8');
-const styles = fs.readFileSync('public/styles.css', 'utf-8');
-const script = fs.readFileSync('public/script.js', 'utf-8');
+const talks = [
+    {
+        title: 'The Future of JavaScript',
+        speakers: ['Jane Doe'],
+        categories: ['JavaScript', 'Web Development'],
+        description: 'A look into the next features of JavaScript and how they will shape the future of web development.'
+    },
+    {
+        title: 'CSS Grids and Flexbox: A Deep Dive',
+        speakers: ['John Smith'],
+        categories: ['CSS', 'Frontend'],
+        description: 'Learn the ins and outs of CSS Grids and Flexbox to create complex and responsive layouts with ease.'
+    },
+    {
+        title: 'Building Scalable APIs with Node.js',
+        speakers: ['Peter Jones', 'Sue Williams'],
+        categories: ['Node.js', 'Backend', 'API'],
+        description: 'An in-depth guide to building scalable and maintainable APIs using Node.js and Express.'
+    },
+    {
+        title: 'Introduction to Machine Learning with TensorFlow.js',
+        speakers: ['Maria Garcia'],
+        categories: ['Machine Learning', 'JavaScript', 'TensorFlow'],
+        description: 'Discover how to build and train machine learning models in the browser with TensorFlow.js.'
+    },
+    {
+        title: 'The Power of Serverless',
+        speakers: ['David Miller'],
+        categories: ['Serverless', 'Cloud', 'Architecture'],
+        description: 'Explore the benefits of serverless architecture and how to build cost-effective and scalable applications.'
+    },
+    {
+        title: 'WebAssembly: The Next Frontier',
+        speakers: ['Chris Brown'],
+        categories: ['WebAssembly', 'Performance'],
+        description: 'An introduction to WebAssembly and how it can be used to run high-performance code in the browser.'
+    }
+];
 
-let scheduleHtml = '';
-let startTime = new Date();
-startTime.setHours(10, 0, 0, 0);
+const schedule = [];
+let currentTime = new Date('2025-11-20T10:00:00');
+
+const addMinutes = (date, minutes) => {
+    return new Date(date.getTime() + minutes * 60000);
+};
 
 const formatTime = (date) => {
     return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 };
 
 talks.forEach((talk, index) => {
-    const endTime = new Date(startTime.getTime() + 60 * 60 * 1000);
-    scheduleHtml += `
-        <div class="talk" data-category="${talk.category.join(', ')}">
-            <h3>${talk.title}</h3>
-            <p class="meta">
-                <strong>Time:</strong> ${formatTime(startTime)} - ${formatTime(endTime)}<br>
-                <strong>Speakers:</strong> ${talk.speakers.join(', ')}<br>
-                <strong>Category:</strong> ${talk.category.join(', ')}
-            </p>
-            <p>${talk.description}</p>
-        </div>
-    `;
-    startTime = new Date(endTime.getTime() + 10 * 60 * 1000); // 10 minute break
+    const startTime = new Date(currentTime);
+    const endTime = addMinutes(startTime, 60);
 
-    if (index === 2) { // Lunch break after the 3rd talk
-        const lunchEndTime = new Date(startTime.getTime() + 60 * 60 * 1000);
-        scheduleHtml += `
-            <div class="break">
-                <h3>Lunch Break</h3>
-                <p class="meta">${formatTime(startTime)} - ${formatTime(lunchEndTime)}</p>
-            </div>
-        `;
-        startTime = lunchEndTime;
+    schedule.push({
+        ...talk,
+        startTime: formatTime(startTime),
+        endTime: formatTime(endTime),
+        duration: 60,
+    });
+
+    currentTime = addMinutes(endTime, 10);
+
+    if (index === 2) {
+        const lunchStartTime = new Date(currentTime);
+        const lunchEndTime = addMinutes(lunchStartTime, 60);
+        schedule.push({
+            isBreak: true,
+            title: 'Lunch Break',
+            startTime: formatTime(lunchStartTime),
+            endTime: formatTime(lunchEndTime),
+        });
+        currentTime = lunchEndTime;
     }
 });
 
-const finalHtml = template
-    .replace('<!-- Talks will be injected here -->', scheduleHtml)
-    .replace('<link rel="stylesheet" href="styles.css">', `<style>${styles}</style>`)
-    .replace('<script src="script.js"></script>', `<script>${script}</script>`);
+const distDir = path.join(__dirname, 'dist');
+if (!fs.existsSync(distDir)) {
+    fs.mkdirSync(distDir);
+}
 
-fs.writeFileSync('index.html', finalHtml);
+fs.writeFileSync(path.join(distDir, 'schedule.json'), JSON.stringify(schedule, null, 4));
 
-console.log('Website generated successfully!');
+
+const templatePath = path.join(__dirname, 'src', 'template.html');
+const stylePath = path.join(__dirname, 'src', 'style.css');
+const scriptPath = path.join(__dirname, 'src', 'script.js');
+
+let template = fs.readFileSync(templatePath, 'utf-8');
+const style = fs.readFileSync(stylePath, 'utf-8');
+let script = fs.readFileSync(scriptPath, 'utf-8');
+
+// Replace the placeholder in the script with the actual data
+script = script.replace(`fetch('schedule.json')
+        .then(response => response.json())
+        .then(data => {`, `
+        const data = ${JSON.stringify(schedule, null, 4)};
+        `);
+
+template = template.replace('<style></style>', `<style>${style}</style>`);
+template = template.replace('<script></script>', `<script>${script}</script>`);
+
+
+fs.writeFileSync(path.join(distDir, 'index.html'), template);
+
+console.log('Website built successfully!');
