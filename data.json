@@ -1,0 +1,44 @@
+[
+  {
+    "title": "The Future of Artificial Intelligence",
+    "speakers": ["Dr. Evelyn Reed"],
+    "categories": ["AI", "Machine Learning"],
+    "duration": 60,
+    "description": "A look into the future of AI and its potential impact on society."
+  },
+  {
+    "title": "Building Scalable Web Applications",
+    "speakers": ["John Smith", "Jane Doe"],
+    "categories": ["Web Development", "Scalability"],
+    "duration": 60,
+    "description": "Techniques and best practices for building web applications that can handle millions of users."
+  },
+  {
+    "title": "Cybersecurity in a Post-Quantum World",
+    "speakers": ["Dr. Alex Chen"],
+    "categories": ["Cybersecurity", "Quantum Computing"],
+    "duration": 60,
+    "description": "Exploring the challenges and solutions for securing data in the age of quantum computers."
+  },
+  {
+    "title": "The Rise of Serverless Architectures",
+    "speakers": ["Emily White"],
+    "categories": ["Serverless", "Cloud Computing", "Architecture"],
+    "duration": 60,
+    "description": "An overview of serverless computing and how it is changing the way we build and deploy applications."
+  },
+  {
+    "title": "Bridging the Gap: Human-Computer Interaction",
+    "speakers": ["Dr. Ben Carter"],
+    "categories": ["HCI", "UX", "Design"],
+    "duration": 60,
+    "description": "Exploring the latest trends and research in human-computer interaction to create more intuitive and user-friendly interfaces."
+  },
+  {
+    "title": "Decentralized Finance (DeFi): The Next Frontier?",
+    "speakers": ["Maria Gonzalez"],
+    "categories": ["DeFi", "Blockchain", "Finance"],
+    "duration": 60,
+    "description": "A deep dive into the world of Decentralized Finance, its potential to disrupt traditional finance, and the challenges ahead."
+  }
+]
