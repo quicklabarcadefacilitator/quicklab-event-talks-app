@@ -1,184 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tech Talks Today</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      background-color: #f4f4f4;
-    }
-
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    .search-container {
-      margin-top: 1rem;
-    }
-
-    #search {
-      width: 80%;
-      max-width: 400px;
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    #schedule {
-      width: 90%;
-      max-width: 800px;
-      margin: 2rem auto;
-    }
-
-    .talk {
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      margin-bottom: 1rem;
-      padding: 1rem;
-    }
-
-    .talk h2 {
-      margin-top: 0;
-    }
-
-    .talk .time {
-      font-weight: bold;
-      color: #333;
-    }
-
-    .talk .speakers {
-      font-style: italic;
-      color: #555;
-    }
-
-    .talk .category {
-      margin-top: 0.5rem;
-    }
-
-    .talk .category span {
-      background-color: #eee;
-      border-radius: 3px;
-      padding: 0.2rem 0.5rem;
-      margin-right: 0.5rem;
-      font-size: 0.8rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Summit 2026</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        #search {
+            padding: 1rem 0;
+            background: #f4f4f4;
+            text-align: center;
+        }
+        #search input {
+            padding: 0.5rem;
+            width: 50%;
+        }
+        #schedule {
+            margin-top: 1rem;
+        }
+        .talk {
+            background: #fff;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 5px solid #333;
+        }
+        .talk h2 {
+            margin-top: 0;
+        }
+        .talk .time {
+            font-weight: bold;
+        }
+        .talk .speakers {
+            font-style: italic;
+        }
+        .talk .categories {
+            margin-top: 0.5rem;
+        }
+        .talk .categories span {
+            background: #333;
+            color: #fff;
+            padding: 0.2rem 0.5rem;
+            border-radius: 5px;
+            margin-right: 0.5rem;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Tech Talks Today</h1>
-    <div class="search-container">
-      <input type="text" id="search" placeholder="Search by category...">
+    <header>
+        <div class="container">
+            <h1>Tech Summit 2026</h1>
+        </div>
+    </header>
+    <div id="search" class="container">
+        <input type="text" id="searchInput" placeholder="Search by category...">
     </div>
-  </header>
-  <main id="schedule">
-    <!-- Schedule will be dynamically generated here -->
-  </main>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const schedule = document.getElementById('schedule');
-      const search = document.getElementById('search');
-      const talks = [
-        {
-          "title": "The Future of JavaScript",
-          "speakers": ["John Doe"],
-          "category": ["JavaScript", "Web Development"],
-          "duration": 60,
-          "description": "A deep dive into the new features of ECMAScript 2025 and what they mean for the future of web development."
-        },
-        {
-          "title": "Building Scalable APIs with Node.js",
-          "speakers": ["Jane Smith"],
-          "category": ["Node.js", "API", "Backend"],
-          "duration": 60,
-          "description": "Learn how to build robust and scalable APIs using Node.js, Express, and MongoDB."
-        },
-        {
-          "title": "CSS Grid and Flexbox: A Deep Dive",
-          "speakers": ["Peter Jones"],
-          "category": ["CSS", "Frontend"],
-          "duration": 60,
-          "description": "Master the power of CSS Grid and Flexbox to create complex and responsive layouts with ease."
-        },
-        {
-          "title": "Introduction to Machine Learning with Python",
-          "speakers": ["Mary Johnson", "David Williams"],
-          "category": ["Python", "Machine Learning"],
-          "duration": 60,
-          "description": "A beginner-friendly introduction to the world of machine learning using Python and popular libraries like Scikit-learn and TensorFlow."
-        },
-        {
-          "title": "The Art of Debugging",
-          "speakers": ["Robert Brown"],
-          "category": ["General", "Debugging"],
-          "duration": 60,
-          "description": "Learn effective debugging techniques and tools to quickly find and fix bugs in your code."
-        },
-        {
-          "title": "WebAssembly: The Future of the Web",
-          "speakers": ["Susan Davis"],
-          "category": ["WebAssembly", "Web Development"],
-          "duration": 60,
-          "description": "Discover the power of WebAssembly and how it's enabling near-native performance in web applications."
+    <div id="schedule" class="container">
+    </div>
+
+    <script>
+        const talks = [
+            {
+                "title": "The Future of JavaScript",
+                "speakers": ["Jane Doe"],
+                "categories": ["JavaScript", "Web Development"],
+                "duration": 60,
+                "description": "A deep dive into the future of JavaScript, including new features and what to expect in the coming years."
+            },
+            {
+                "title": "Building Scalable APIs with Node.js",
+                "speakers": ["John Smith"],
+                "categories": ["Node.js", "APIs", "Backend"],
+                "duration": 60,
+                "description": "Learn how to build robust and scalable APIs using Node.js and Express."
+            },
+            {
+                "title": "Frontend Frameworks in 2026",
+                "speakers": ["Peter Jones", "Mary Williams"],
+                "categories": ["Frontend", "Web Development"],
+                "duration": 60,
+                "description": "A comparative look at the most popular frontend frameworks and their evolution."
+            },
+            {
+                "title": "The Rise of AI in Software Development",
+                "speakers": ["Susan Miller"],
+                "categories": ["AI", "Machine Learning"],
+                "duration": 60,
+                "description": "How AI is changing the landscape of software development and what it means for developers."
+            },
+            {
+                "title": "DevOps for Modern Applications",
+                "speakers": ["David Brown"],
+                "categories": ["DevOps", "CI/CD"],
+                "duration": 60,
+                "description": "Best practices for implementing DevOps pipelines for modern applications."
+            },
+            {
+                "title": "Cybersecurity in the Cloud",
+                "speakers": ["Laura Wilson"],
+                "categories": ["Cybersecurity", "Cloud"],
+                "duration": 60,
+                "description": "An overview of the latest security threats in cloud computing and how to mitigate them."
+            }
+        ];
+
+        const scheduleContainer = document.getElementById('schedule');
+        const searchInput = document.getElementById('searchInput');
+
+        function renderSchedule(filteredTalks) {
+            scheduleContainer.innerHTML = '';
+            let startTime = new Date('2026-01-01T10:00:00');
+            let talkCounter = 0;
+
+            filteredTalks.forEach((talk, index) => {
+                const talkElement = document.createElement('div');
+                talkElement.classList.add('talk');
+
+                const endTime = new Date(startTime.getTime() + talk.duration * 60000);
+
+                talkElement.innerHTML = `
+                    <div class="time">${formatTime(startTime)} - ${formatTime(endTime)}</div>
+                    <h2>${talk.title}</h2>
+                    <div class="speakers">${talk.speakers.join(', ')}</div>
+                    <p>${talk.description}</p>
+                    <div class="categories">
+                        ${talk.categories.map(category => `<span>${category}</span>`).join('')}
+                    </div>
+                `;
+                scheduleContainer.appendChild(talkElement);
+
+                startTime = new Date(endTime.getTime() + 10 * 60000);
+                talkCounter++;
+
+                if (talkCounter === 3) {
+                    const lunchElement = document.createElement('div');
+                    lunchElement.classList.add('talk');
+                    lunchElement.innerHTML = `
+                        <div class="time">${formatTime(startTime)} - ${formatTime(new Date(startTime.getTime() + 60 * 60000))}</div>
+                        <h2>Lunch Break</h2>
+                    `;
+                    scheduleContainer.appendChild(lunchElement);
+                    startTime = new Date(startTime.getTime() + 60 * 60000 + 10 * 60000);
+                }
+            });
         }
-      ];
 
-      function displayTalks(talksToDisplay) {
-        schedule.innerHTML = '';
-        let startTime = 10 * 60; // 10:00 AM in minutes
+        function formatTime(date) {
+            return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        }
 
-        talksToDisplay.forEach((talk, index) => {
-          const talkElement = document.createElement('div');
-          talkElement.classList.add('talk');
+        function filterTalks() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const filteredTalks = talks.filter(talk => {
+                return talk.categories.some(category => category.toLowerCase().includes(searchTerm));
+            });
+            renderSchedule(filteredTalks);
+        }
 
-          const time = `${Math.floor(startTime / 60)}:${(startTime % 60).toString().padStart(2, '0')}`;
-          const endTime = startTime + talk.duration;
-          const endTimeStr = `${Math.floor(endTime / 60)}:${(endTime % 60).toString().padStart(2, '0')}`;
+        searchInput.addEventListener('input', filterTalks);
 
-          talkElement.innerHTML = `
-            <div class="time">${time} - ${endTimeStr}</div>
-            <h2>${talk.title}</h2>
-            <div class="speakers">${talk.speakers.join(', ')}</div>
-            <div class="category">
-              ${talk.category.map(cat => `<span>${cat}</span>`).join('')}
-            </div>
-            <p>${talk.description}</p>
-          `;
-          schedule.appendChild(talkElement);
-
-          startTime += talk.duration + 10; // Add 10 minute transition
-
-          if (index === 2) { // Add lunch break after the 3rd talk
-            const lunchElement = document.createElement('div');
-            lunchElement.classList.add('talk');
-            const lunchStartTime = endTime + 10;
-            const lunchEndTime = lunchStartTime + 60;
-            const lunchStartTimeStr = `${Math.floor(lunchStartTime / 60)}:${(lunchStartTime % 60).toString().padStart(2, '0')}`;
-            const lunchEndTimeStr = `${Math.floor(lunchEndTime / 60)}:${(lunchEndTime % 60).toString().padStart(2, '0')}`;
-            lunchElement.innerHTML = `<div class="time">${lunchStartTimeStr} - ${lunchEndTimeStr}</div><h2>Lunch Break</h2>`;
-            schedule.appendChild(lunchElement);
-            startTime = lunchEndTime + 10;
-          }
-        });
-      }
-
-      displayTalks(talks);
-
-      search.addEventListener('input', () => {
-        const searchTerm = search.value.toLowerCase();
-        const filteredTalks = talks.filter(talk => {
-          return talk.category.some(cat => cat.toLowerCase().includes(searchTerm));
-        });
-        displayTalks(filteredTalks);
-      });
-    });
-  </script>
+        renderSchedule(talks);
+    </script>
 </body>
 </html>
